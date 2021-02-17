@@ -1,0 +1,43 @@
+import static javax.swing.JOptionPane.*;
+class Gjett {
+  public static void main(String[] args) {
+
+    String gjetttallet = showInputDialog("Gjett det hemmelige heltallet:");
+    String gjetttegnet = showInputDialog("Gjett det hemmelige tegnet: ");
+    String Gjettordet = showInputDialog("Gjett teksten/ordet: ");
+
+
+    int tall = Integer.parseInt(gjetttallet);
+    int hemmeligetall = 5;
+
+    char tegn = gjetttegnet.charAt(0);
+    char hemmeligbokstav = 'h';
+
+    String ord = Gjettordet;
+    String hemmeligord = "hallo";
+
+    //* bruker if-setning for å sjekke om inntastet verdier er det samme (==) som hemmelige verdier. 
+
+    if (tall == hemmeligetall) {
+      boolean hemmligetall = true;
+      showMessageDialog(null, "Gratulerer, du gjettet riktig som var " + hemmeligetall);
+  } else{
+      showMessageDialog(null, "Beklager, det var feil, riktig tall var: " + hemmeligetall);
+  }
+
+    if (tegn == hemmeligbokstav) {
+      boolean hemmligbokstav = true;
+      showMessageDialog(null, "Gratulerer, du gjettet riktig bokstav! ");
+    } else{
+      showMessageDialog(null, "beklager, det var feil, riktige svar er: " + hemmeligbokstav);
+    }
+
+    if (ord.equals(hemmeligord)){
+      String utskrift = "Gratulerer, du gjettet riktig ord! ";
+      showMessageDialog(null, utskrift);
+    } else{
+      showMessageDialog(null, "beklager, det var feil, riktige svar er: " + hemmeligbokstav);
+    }
+   
+  }
+}
